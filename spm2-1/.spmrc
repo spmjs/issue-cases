@@ -1,0 +1,5 @@
+[source:default]
+url = https://spmjs.org
+
+[install]
+format = {{family}}/{{filename}}
