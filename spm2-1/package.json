@@ -1,2 +1,13 @@
 {
+  "family": "issue",
+  "name": "hello",
+  "spm": {
+    "format": "{{family}}/{{filename}}",
+    "alias": {
+      "base": "arale/base"
+    },
+    "output": {
+      "code.js": ["code.js"]
+    }
+  }
 }
