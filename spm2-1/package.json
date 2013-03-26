@@ -6,8 +6,6 @@
     "alias": {
       "base": "arale/base"
     },
-    "output": {
-      "code.js": ["code.js"]
-    }
+    "output": ["code.js"]
   }
 }
