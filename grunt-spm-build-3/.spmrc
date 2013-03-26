@@ -1,0 +1,3 @@
+[install]
+format = {{family}}/{{filename}}
+path = static/js
