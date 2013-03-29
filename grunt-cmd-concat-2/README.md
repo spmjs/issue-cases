@@ -1,0 +1,1 @@
+﻿所需环境及依赖都准备好以后，执行grunt 命令，提示“done without errors”,但是dist里没有生成任何文件，测试的文件已附上。

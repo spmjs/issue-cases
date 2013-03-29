@@ -1,0 +1,1 @@
+module.exports = function(grunt) {  grunt.initConfig({  concat: {    options: {      relative: true    },    files: {      'dist/a.js': ['src/a.js', 'src/b.js'],    },  },})	grunt.loadNpmTasks('grunt-cmd-concat');	grunt.registerTask('default', ['concat']);};
