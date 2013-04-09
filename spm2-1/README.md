@@ -4,7 +4,7 @@ This is an example. It is not a bug report.
 
 Let's play with the latest spm2:
 
-    npm install spm@ninja -g
+    npm install spm -g
 
 ## spm install
 
