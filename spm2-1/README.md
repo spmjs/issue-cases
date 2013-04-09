@@ -27,7 +27,7 @@ And try spm install again:
 
 You can change the directory:
 
-    spm install arale/class js
+    spm install arale/class -d js
 
 Now change it back to:
 
