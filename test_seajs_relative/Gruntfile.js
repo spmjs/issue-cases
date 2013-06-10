@@ -14,13 +14,14 @@ module.exports = function(grunt) {
       files: {
         cwd: 'index',
         src: '*.js',
-        dest: '.tmp'
+        dest: '.tmp/index'
       }
     },
     concat: {
       relative: {
         options: {
-          include: 'relative'
+          include: 'all',
+          paths: ['.tmp']
         },
         files: {
           'index.js': ['.tmp/index.js']
