@@ -10,18 +10,26 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
+    transport: {
+      files: {
+        cwd: 'index',
+        src: '*.js',
+        dest: '.tmp'
+      }
+    },
     concat: {
       relative: {
         options: {
           include: 'relative'
         },
         files: {
-          'index.js': ['index/index.js']
+          'index.js': ['.tmp/index.js']
         }
       }
     }
   });
   grunt.loadNpmTasks('grunt-cmd-concat');
+  grunt.loadNpmTasks('grunt-cmd-transport');
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['concat']);
+  grunt.registerTask('default', ['transport', 'concat']);
 };
