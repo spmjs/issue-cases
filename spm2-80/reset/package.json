@@ -1,0 +1,20 @@
+{
+  "name": "reset",
+  "description": "reset",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ymz-style/reset",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ymz-style/reset.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ymz-style/reset/issues"
+  },
+  "family": "ymz-style",
+  "spm": {
+    "alias": {},
+    "output": [
+      "reset.css"
+    ]
+  }
+}

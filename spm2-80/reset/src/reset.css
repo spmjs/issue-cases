@@ -1,0 +1,162 @@
+/* ymz-style.reset 样式模块 */
+
+@charset "utf-8";
+/*
+ * FileName   : reset.css
+ * Desc       : 重置样式表,包括html5标签的样式重置
+ * Version    : 1.0.0
+ * LastChange : 2012-10-24T14:00:06
+ * */
+/*
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+*/
+/*
+ * html为顶级容器（ie6除外，它的顶级为body）
+ * -webkit-text-size-adjust:none会导致页面缩放文字失效
+ * background-color:#FFF,html元素设置了背景色会导致body的背景色不能100%高度覆盖
+ * 把白色背景色定义在html上，定义这个背景色的目的是，修复一些浏览器中设置了浏览器保护色
+ * overflow-y:scroll定义在被iframe引用的页面会强制带滚动条，移出reset放到global中定义，样式是整个样式表下载完了再渲染的
+ * */
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	height: 100%;
+	font-size: 100%;
+	color: #333;
+	background-color: #FFF;
+}
+/*
+ * word-break:break-all会截断单个英文单词
+ * TODO: 未测试属性position:relative
+ * */
+body {
+	margin: 0;
+	word-wrap: break-word;
+	min-height: 100%;
+	_height: 100%;
+}
+/*
+ * :focus{outline:0}定义后按tab键在连接间跳转没有标识当前连接的外轮廓点线
+ * :active{outline:0;}
+ * :visited{outline:0;}
+ * */
+a:hover,
+a:active,
+a:visited {
+	outline: 0;
+}
+a:link,
+a:visited,
+ins {
+	text-decoration: none;
+}
+/* 重置HTML5元素， lt IE 9 需要引用html5shiv.js */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {
+	display: block;
+}
+/* 重置HTML5媒体元素 */
+audio,video,canvas {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+audio:not([controls]),
+[hidden] {
+	display: none;
+}
+/* 重置各个元素内外间距 */
+/* select重置padding后在Firefox会有显示不全的bug */
+dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,select,textarea,p,blockquote,th,td,
+article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+	margin: 0;
+	padding: 0;
+}
+/* 去除默认边框 */
+fieldset,iframe,img,abbr,acronym {
+	border: 0 none;
+}
+img {
+	-ms-interpolation-mode: bicubic;
+}
+/* 修复下方3pxBug */
+img,iframe {
+	vertical-align: middle;
+}
+abbr,acronym {
+	font-variant: normal;
+}
+address,caption,cite,code,dfn,em,i,th,var,optgroup {
+	font-style: normal;
+	font-weight: normal;
+}
+h1,h2,h3,h4,h5,h6,code,kbd,samp,tt,sup,sub,small,input,button,textarea,select {
+	font-size: 100%;
+}
+input,button,textarea,select,optgroup,option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+/* 列表元素 */
+ol,ul,menu {
+	list-style: none outside none;
+}
+/* 表格元素 */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+caption,th {
+	text-align: left;
+}
+/* 表单元素 */
+textarea {
+	overflow: auto;
+	resize: vertical;
+}
+input,select,button,textarea {
+	vertical-align: middle;
+}
+button {
+	width: auto;
+	cursor: pointer;
+	overflow: visible;
+}
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+}
+button::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+	border: 0 none;
+	padding: 0;
+}
+sup {
+	vertical-align: text-top;
+}
+sub {
+	vertical-align: text-bottom;
+}
+blockquote,q {
+	quotes: none;
+}
+blockquote:before,blockquote:after,q:before,q:after {
+	content: "";
+	content: none;
+}
+/* HTML5默认元素样式 */
+mark {
+	background-color: #FF6;
+}
+del {
+	text-decoration: line-through;
+}
+abbr[title],dfn[title] {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
